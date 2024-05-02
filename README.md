@@ -12,7 +12,7 @@ The following will need to be installed. Please follow the links and instruction
 
 - [Foundry](https://github.com/foundry-rs/foundry)
 - Node >= 14
-- yarn or npm >= 7
+- pnpm
 
 ### Quickstart
 
@@ -21,7 +21,7 @@ The following will need to be installed. Please follow the links and instruction
 Once you've cloned and entered into your repository, you need to install the necessary dependencies. In order to do so, simply run:
 
 ```shell
-yarn install
+pnpm install
 forge install
 ```
 

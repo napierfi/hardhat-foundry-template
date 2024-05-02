@@ -3,13 +3,12 @@
   "version": "0.0.1",
   "description": "Forkable Hardhat & Foundry template",
   "scripts": {
-    "build": "hardhat compile",
-    "test": "hardhat test",
-    "test:forge": "forge test -vvv",
+    "build": "forge build",
+    "test": "forge test",
     "doc": "forge doc",
     "type": "hardhat typechain",
-    "lint:check": "prettier --check '**.{sol,js,ts}'",
-    "lint:fix": "prettier --write '**.{sol,js,ts}'",
+    "lint:check:sol": "forge fmt --check",
+    "lint:fix:sol": "forge fmt",
     "prepare": "husky install"
   },
   "repository": {
@@ -53,16 +52,12 @@
     "npm": ">=7.0.0"
   },
   "lint-staged": {
-    "*.sol": "prettier --write",
-    "*.js": "prettier --write",
-    "*.ts": "prettier --write"
+    "*.sol": "forge fmt"
   },
   "dependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^2.0.1",
+    "@nomicfoundation/hardhat-toolbox": "2.0.2",
     "@typechain/ethers-v5": "^10.2.0",
     "@typechain/hardhat": "^6.1.5",
-    "flat": "5.0.1",
-    "minimatch": "3.0.5",
     "typechain": "^8.1.1"
   },
   "private": "false",
@@ -72,6 +67,9 @@
     "lodash": ">=4.17.21",
     "node-fetch": ">=2.6.7",
     "underscore": ">=1.12.1",
-    "yargs-parser": ">=5.0.1"
+    "yargs-parser": ">=5.0.1",
+    "yargs-unparser": ">=2.0.0",
+    "minimatch": ">=3.0.5",
+    "flat": ">=5.0.2"
   }
 }
